@@ -1,54 +1,94 @@
-# template-node
+# @mkvlrn/result
 
-A sane, opinionated template for esm node projects written in typescript.
+Type-safe Result pattern for TypeScript representing success or error. Anything to avoid try/catch hell.
 
-For new, node 24+ projects.
+## Installation
 
-Uses:
+```bash
+npm add @mkvlrn/result
+```
 
-- [biome](https://github.com/biomejs/biome) for linting and formatting
-- [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
-- [husky](https://github.com/typicode/husky) for git hooks
-- [vite](https://github.com/vitejs/vite) for building
-- [vitest](https://github.com/vitest-dev/vitest) for testing
-- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+## Usage
 
-## running
+```typescript
+import { Result, AsyncResult, R } from "@mkvlrn/result";
 
-### `npm run dev`
+// Success
+const success = R.ok(42);
 
-Runs the project in watch mode.
+// Error
+const failure = R.error(new Error("Something went wrong"));
 
-### `npm run build`
+// Check result
+const result = R.ok(42);
+if (result.error) {
+  console.log("Error:", result.error.message);
+} else {
+  console.log("Value:", result.value);
+}
+```
 
-Builds/transpiles the code to `./build`.
+## Examples
 
-### `npm start`
+### Basic Function
 
-Runs the built project.
+```typescript
+function divide(a: number, b: number): Result<number, Error> {
+  if (b === 0) {
+    return R.error(new Error("Division by zero"));
+  }
+  return R.ok(a / b);
+}
 
-### `npm test`
+const result = divide(10, 2);
+if (!result.error) {
+  console.log(result.value); // 5
+}
+```
 
-Runs tests.
+### Async Operations
 
-### `npm run biome-fix`
+```typescript
+async function fetchUser(id: number): AsyncResult<User, Error> {
+  try {
+    const response = await fetch(`/api/users/${id}`);
+    if (!response.ok) {
+      return R.error(new Error(`HTTP ${response.status}`));
+    }
+    const user = await response.json();
+    return R.ok(user);
+  } catch (error) {
+    return R.error(error instanceof Error ? error : new Error("Unknown error"));
+  }
+}
+```
 
-Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
+### Custom Error Types
 
-### `npm run typecheck`
+```typescript
+class ValidationError extends Error {
+  readonly customField: number;
 
-Runs type checking using tsc.
+  constructor(customField: number, message: string) {
+    super(message);
+    this.name = "ValidationError";
+    this.customField = customField;
+  }
+}
 
-## that tsconfig.json seems very strict and opinionated
+function validateEmail(email: string): Result<string, ValidationError> {
+  if (!email.includes("@")) {
+    return Result.error(new ValidationError(400, "custom"));
+  }
+  return Result.ok(email);
+}
 
-Yup.
+const result = validateEmail("invalid-email");
+if (result.error) {
+  console.log(`${result.error.customField}: ${result.error.message}`);
+}
+```
 
-## vscode
+## License
 
-You might want to install the recommended extensions in vscode. Search for **@recommended** in the extensions tab, they'll show up as _"workspace recommendations"_.
-
-If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
-
-This is done by the `.vscode/settings.json` file.
-
-Debug configurations are also included (for source using tsx and for bundle using the generated source maps).
+MIT

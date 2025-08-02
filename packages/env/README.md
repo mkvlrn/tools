@@ -1,54 +1,36 @@
-# template-node
+# @mkvlrn/env
 
-A sane, opinionated template for esm node projects written in typescript.
+Environment variable parser powered by zod.
 
-For new, node 24+ projects.
+## Installation
 
-Uses:
+```bash
+npm add @mkvlrn/env
+```
 
-- [biome](https://github.com/biomejs/biome) for linting and formatting
-- [commitlint](https://github.com/conventional-changelog/commitlint) for linting commit messages
-- [husky](https://github.com/typicode/husky) for git hooks
-- [vite](https://github.com/vitejs/vite) for building
-- [vitest](https://github.com/vitest-dev/vitest) for testing
-- [tsx](https://github.com/privatenumber/tsx) for dev time typescript
+## Usage
 
-## running
+```typescript
+import { setupEnv } from "@mkvlrn/env";
+import { z } from "zod";
 
-### `npm run dev`
+const schema = z.object({
+  PORT: z.coerce.number(),
+  NODE_ENV: z.enum(["development", "production", "test"]),
+});
 
-Runs the project in watch mode.
+const env = setupEnv(process.env, schema);
 
-### `npm run build`
+// Bootstrap validation
+env();
 
-Builds/transpiles the code to `./build`.
+// Access environment variables
+const port = env("PORT"); // port is inferred as `number`
+const nodeEnv = env("NODE_ENV"); // nodeEnv is inferred as "development" | "production" | "test"
 
-### `npm start`
+console.log(`Server running on port: ${port}, Environment: ${nodeEnv}`);
+```
 
-Runs the built project.
+## License
 
-### `npm test`
-
-Runs tests.
-
-### `npm run biome-fix`
-
-Runs biome in fix mode (only [safe fixes](https://biomejs.dev/linter/#safe-fixes)) to lint and format the project.
-
-### `npm run typecheck`
-
-Runs type checking using tsc.
-
-## that tsconfig.json seems very strict and opinionated
-
-Yup.
-
-## vscode
-
-You might want to install the recommended extensions in vscode. Search for **@recommended** in the extensions tab, they'll show up as _"workspace recommendations"_.
-
-If you have been using eslint and prettier and their extensions, you might want to disable eslint entirely and keep prettier as the formatter only for certain types of files.
-
-This is done by the `.vscode/settings.json` file.
-
-Debug configurations are also included (for source using tsx and for bundle using the generated source maps).
+MIT

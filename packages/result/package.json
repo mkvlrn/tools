@@ -17,6 +17,9 @@
   "engines": {
     "node": "24.x"
   },
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "vite build",
     "dev": "tsx --watch src/main.ts",
