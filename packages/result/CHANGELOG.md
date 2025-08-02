@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.5
+
+### Patch Changes
+
+- eda27e3: monorepo publish automation
+
 ## 4.0.4
 
 ### Patch Changes
