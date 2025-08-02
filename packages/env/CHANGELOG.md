@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.7
+
+### Patch Changes
+
+- 7b959b3: actually export the built modules
+
 ## 1.0.6
 
 ### Patch Changes
