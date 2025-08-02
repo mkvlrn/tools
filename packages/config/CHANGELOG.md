@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.10
+
+### Patch Changes
+
+- [`47a139c`](https://github.com/mkvlrn/tools/commit/47a139c80caf9bd63b273df906862e0e28038284) Thanks [@mkvlrn](https://github.com/mkvlrn)! - remove unused settings
+
 ## 2.0.9
 
 ### Patch Changes
