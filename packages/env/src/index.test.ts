@@ -62,7 +62,7 @@ describe("setupEnv", () => {
     });
     vi.stubEnv("PORT", "8080");
     vi.stubEnv("NODE_ENV", "development");
-    const parseSpy = vi.spyOn(schema, "parse");
+    const parseSpy = vi.spyOn(schema, "safeParse");
 
     const env = setupEnv(process.env, schema);
     env();

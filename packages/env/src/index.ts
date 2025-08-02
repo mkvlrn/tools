@@ -1,17 +1,4 @@
-import { ZodError, type ZodObject, type ZodRawShape, type z } from "zod";
-
-function error(err: unknown) {
-  if (err instanceof ZodError) {
-    const issueSummaries: string[] = err.issues.map((issue) => {
-      const path = issue.path.join(".");
-      return `  ${path ? `'${path}'` : "root"}: ${issue.message}`;
-    });
-
-    throw new Error(`Validation of environment variables failed:\n${issueSummaries.join("\n")}`);
-  }
-
-  throw err;
-}
+import type { ZodObject, ZodRawShape, z } from "zod";
 
 /**
  * Validates and parses environment variables based on a given schema and returns a function to access them.
@@ -44,7 +31,7 @@ function error(err: unknown) {
  */
 export function setupEnv<T extends ZodRawShape>(env: NodeJS.ProcessEnv, schema: ZodObject<T>) {
   type ParsedEnv = z.infer<typeof schema>;
-  let parsed: ParsedEnv | null = null;
+  let parsed: ReturnType<typeof schema.safeParse> | null = null;
 
   // overloads
   function getEnv<K extends keyof ParsedEnv>(key: K): ParsedEnv[K];
@@ -53,15 +40,19 @@ export function setupEnv<T extends ZodRawShape>(env: NodeJS.ProcessEnv, schema: 
   // implementation
   function getEnv<K extends keyof ParsedEnv>(key?: K): ParsedEnv[K] | undefined {
     if (!parsed) {
-      try {
-        parsed = schema.parse(env);
-      } catch (err) {
-        error(err);
-        return;
-      }
+      parsed = schema.safeParse(env);
     }
 
-    return key ? parsed[key] : undefined;
+    if (!parsed.success) {
+      const issueSummaries: string[] = parsed.error.issues.map((issue) => {
+        const path = issue.path.join(".");
+        return `  ${path ? `'${path}'` : "root"}: ${issue.message}`;
+      });
+
+      throw new Error(`Validation of environment variables failed:\n${issueSummaries.join("\n")}`);
+    }
+
+    return key ? parsed.data[key] : undefined;
   }
 
   return getEnv;
