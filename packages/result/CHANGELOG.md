@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.6
+
+### Patch Changes
+
+- 63f4219: fix monorepo publish automation
+
 ## 4.0.5
 
 ### Patch Changes

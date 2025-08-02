@@ -1,7 +1,7 @@
 {
   "name": "@mkvlrn/env",
   "description": "Environment variable parser powered by zod",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "type": "module",
   "author": "Mike Valeriano <mkvlrn@proton.me>",
