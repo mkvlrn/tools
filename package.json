@@ -24,7 +24,8 @@
     "biome-check": "turbo biome-check",
     "biome-fix": "turbo biome-fix",
     "typecheck": "turbo typecheck",
-    "prepare": "turbo build"
+    "prepare": "husky",
+    "changeset-publish": "turbo build && changest publish"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.3",
