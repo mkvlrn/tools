@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.9
+
+### Patch Changes
+
+- 8698597: republish with internals wired
+
 ## 1.0.8
 
 ### Patch Changes

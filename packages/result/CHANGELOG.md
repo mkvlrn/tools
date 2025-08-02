@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.8
+
+### Patch Changes
+
+- 8698597: republish with internals wired
+
 ## 4.0.7
 
 ### Patch Changes
