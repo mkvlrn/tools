@@ -20,6 +20,10 @@
   "files": [
     "build"
   ],
+  "exports": {
+    "types": "./build/index.d.ts",
+    "default": "./build/index.js"
+  },
   "scripts": {
     "build": "vite build",
     "dev": "tsx --watch src/main.ts",
