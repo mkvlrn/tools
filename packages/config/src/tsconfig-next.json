@@ -35,20 +35,5 @@
     "types": ["@testing-library/jest-dom"],
     "incremental": true,
     "tsBuildInfoFile": "./build/.tsbuildinfo"
-  },
-
-  // also for next
-  "include": [
-    "./*.config.ts",
-    ".next/types/**/*.ts",
-    "./build/types/**/*.ts",
-    "./css.d.ts",
-    "./next-env.d.ts",
-    "./src/**/*.ts",
-    "./src/**/*.tsx",
-    "./test/**/*.ts",
-    "./test/**/*.tsx"
-  ],
-
-  "exclude": ["node_modules"]
+  }
 }
