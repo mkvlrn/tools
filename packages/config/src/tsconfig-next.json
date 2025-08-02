@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    // very strict
+    "allowJs": false,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
+
+    // esm
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext", "Dom", "DOM.Iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "target": "esnext",
+
+    // pnpm compatibility
+    "preserveSymlinks": true,
+
+    // self explanatory
+    "resolveJsonModule": true,
+
+    // don't try to check for errors on imported libs
+    "skipLibCheck": true,
+
+    // react, next
+    "jsx": "preserve",
+    "plugins": [{ "name": "next" }],
+    "types": ["@testing-library/jest-dom"],
+    "incremental": true,
+    "tsBuildInfoFile": "./build/.tsbuildinfo"
+  },
+
+  // also for next
+  "include": [
+    "./*.config.ts",
+    ".next/types/**/*.ts",
+    "./build/types/**/*.ts",
+    "./css.d.ts",
+    "./next-env.d.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./test/**/*.ts",
+    "./test/**/*.tsx"
+  ],
+
+  "exclude": ["node_modules"]
+}

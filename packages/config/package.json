@@ -1,0 +1,37 @@
+{
+  "name": "@mkvlrn/config",
+  "description": "Opinionated configurations for biome and typescript",
+  "version": "2.0.6",
+  "license": "MIT",
+  "type": "module",
+  "author": "Mike Valeriano <mkvlrn@proton.me>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mkvlrn/tools"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "biome",
+    "tsconfig"
+  ],
+  "engines": {
+    "node": "24.x"
+  },
+  "files": [
+    "src"
+  ],
+  "exports": {
+    "./biome-node": "./src/biome-node.jsonc",
+    "./biome-nest": "./src/biome-nest.jsonc",
+    "./biome-react": "./src/biome-react.jsonc",
+    "./biome-next": "./src/biome-next.jsonc",
+    "./tsconfig-node": "./src/tsconfig-node.json",
+    "./tsconfig-nest": "./src/tsconfig-nest.json",
+    "./tsconfig-react": "./src/tsconfig-react.json",
+    "./tsconfig-next": "./src/tsconfig-next.json"
+  },
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
+}
