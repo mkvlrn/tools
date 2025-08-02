@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@changesets/config/schema.json",
   "changelog": ["@changesets/changelog-github", { "repo": "mkvlrn/tools" }],
-  "commit": true,
+  "commit": false,
   "fixed": [],
   "linked": [],
   "access": "public",
