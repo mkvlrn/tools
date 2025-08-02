@@ -1,0 +1,3 @@
+turbo run typecheck
+turbo run biome-check
+turbo run test

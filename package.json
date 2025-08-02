@@ -1,0 +1,40 @@
+{
+  "name": "tools",
+  "description": "Assorted typescript tools for whatever",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "author": "Mike Valeriano <mkvlrn@proton.me>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mkvlrn/tools"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "tools"
+  ],
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "turbo build",
+    "test": "turbo test",
+    "biome-check": "turbo biome-check",
+    "biome-fix": "turbo biome-fix",
+    "typecheck": "turbo typecheck",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.3",
+    "@changesets/cli": "^2.29.5",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.1.7",
+    "turbo": "^2.5.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

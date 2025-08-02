@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/turbo/schema.json",
+  "dangerouslyDisablePackageManagerCheck": true,
+  "ui": "tui",
+  "tasks": {
+    "test": {
+      "cache": false
+    },
+    "biome-check": {
+      "cache": false
+    },
+    "biome-fix": {
+      "cache": false
+    },
+    "typecheck": {
+      "cache": false
+    }
+  }
+}

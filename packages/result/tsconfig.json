@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    // no transpiling
+    "noEmit": true,
+
+    // no funny business
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+
+    // very strict
+    // https://whatislove.dev/articles/the-strictest-typescript-config/
+    "allowJs": false,
+    "exactOptionalPropertyTypes": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
+
+    // esm
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+
+    // pnpm compatibility
+    "preserveSymlinks": true,
+
+    // self explanatory
+    "resolveJsonModule": true,
+
+    // don't try to check for errors on imported libs
+    "skipLibCheck": true,
+
+    // paths
+    "baseUrl": ".",
+    "paths": {
+      "#/*": ["./src/*"]
+    }
+  }
+}
