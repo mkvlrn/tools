@@ -9,3 +9,7 @@ Type-safe Result pattern for TypeScript representing success or error. Anything 
 ## @mkvlrn/env
 
 Environment variable parser powered by zod. [README](./packages/env/README.md)
+
+## @mkvlrn/config
+
+Opinionated configurations for biome and typescript. [README](./packages/config/README.md)
