@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.6
+
+### Patch Changes
+
+- 293dd67: update install instructions
+
 ## 1.0.5
 
 ### Patch Changes
