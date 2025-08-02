@@ -3,6 +3,10 @@
   "dangerouslyDisablePackageManagerCheck": true,
   "ui": "tui",
   "tasks": {
+    "build": {
+      "cache": true,
+      "dependsOn": ["^build"]
+    },
     "test": {
       "cache": false
     },

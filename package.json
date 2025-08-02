@@ -1,7 +1,7 @@
 {
   "name": "tools",
   "description": "Assorted typescript tools for whatever",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "license": "MIT",
   "private": true,
   "type": "module",
@@ -24,7 +24,7 @@
     "biome-check": "turbo biome-check",
     "biome-fix": "turbo biome-fix",
     "typecheck": "turbo typecheck",
-    "prepare": "husky"
+    "prepare": "turbo build"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.3",

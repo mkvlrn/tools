@@ -1,5 +1,5 @@
 {
-  "name": "@repo/env",
+  "name": "@mkvlrn/env",
   "description": "Environment variable parser powered by zod",
   "version": "1.0.1",
   "license": "MIT",
