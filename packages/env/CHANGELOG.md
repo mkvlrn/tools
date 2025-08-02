@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.11
+
+### Patch Changes
+
+- [`e249134`](https://github.com/mkvlrn/tools/commit/e2491347b5beeb04fe863b169466f7126aab81c9) Thanks [@mkvlrn](https://github.com/mkvlrn)! - changelog testing
+
 ## 1.0.10
 
 ### Patch Changes
