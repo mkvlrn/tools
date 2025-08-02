@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.5
+
+### Patch Changes
+
+- 63f4219: fix monorepo publish automation
+
 ## 1.0.4
 
 ### Patch Changes
