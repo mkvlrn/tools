@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.12
+
+### Patch Changes
+
+- [`42daf1b`](https://github.com/mkvlrn/tools/commit/42daf1b8dd154ace379b5ecc7ba15a8a2828e8ee) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump deps, setup lint-staged
+
 ## 2.0.11
 
 ### Patch Changes
