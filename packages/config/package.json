@@ -31,7 +31,10 @@
     "./tsconfig-react": "./src/tsconfig-react.json",
     "./tsconfig-next": "./src/tsconfig-next.json"
   },
-  "scripts": {},
-  "devDependencies": {},
-  "dependencies": {}
+  "scripts": {
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.1.4"
+  }
 }

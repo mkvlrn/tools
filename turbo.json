@@ -18,6 +18,9 @@
     },
     "typecheck": {
       "cache": false
+    },
+    "lint-staged": {
+      "cache": false
     }
   }
 }

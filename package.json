@@ -24,6 +24,7 @@
     "biome-check": "turbo biome-check",
     "biome-fix": "turbo biome-fix",
     "typecheck": "turbo typecheck",
+    "lint-staged": "turbo lint-staged",
     "prepare": "husky",
     "changeset-publish": "turbo build && changeset publish"
   },
