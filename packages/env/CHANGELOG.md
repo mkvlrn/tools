@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.12
+
+### Patch Changes
+
+- [`329d8dd`](https://github.com/mkvlrn/tools/commit/329d8ddcec760c1048759d8d53e758017d5d83fd) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump deps
+
 ## 1.0.11
 
 ### Patch Changes
