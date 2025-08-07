@@ -6,16 +6,20 @@ Some Typescript tools I use frequently.
 
 Type-safe Result pattern for TypeScript representing success or error. Anything to avoid try/catch hell.
 
-[README](./packages/result/README.md)
+![NPM Version](https://img.shields.io/npm/v/%40mkvlrn%2Fresult?logo=npm) ![Static Badge](https://img.shields.io/badge/readme-white?logo=ReadMe&link=.%2Fpackages%2Fresult%2FREADME.md)
 
 ## @mkvlrn/env
 
 Environment variable parser powered by zod.
+
+![NPM Version](https://img.shields.io/npm/v/%40mkvlrn%2Fenv?logo=npm) ![Static Badge](https://img.shields.io/badge/readme-white?logo=ReadMe&link=.%2Fpackages%2Fenv%2FREADME.md)
 
 [README](./packages/env/README.md)
 
 ## @mkvlrn/config
 
 Opinionated configurations for biome and typescript.
+
+![NPM Version](https://img.shields.io/npm/v/%40mkvlrn%2Fconfig?logo=npm) ![Static Badge](https://img.shields.io/badge/readme-white?logo=ReadMe&link=.%2Fpackages%2Fconfig%2FREADME.md)
 
 [README](./packages/config/README.md)
