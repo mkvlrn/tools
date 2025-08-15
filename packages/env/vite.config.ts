@@ -11,7 +11,7 @@ const entryRoot = "src";
 // emits declarations only if there is no src/main.ts file
 const dtsPlugin = existsSync("./src/main.ts")
   ? null
-  : dts({ include: entry, logLevel: "error", entryRoot: entryRoot });
+  : dts({ include: entry, logLevel: "error", entryRoot });
 
 export default defineConfig({
   plugins: [

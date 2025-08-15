@@ -1,6 +1,9 @@
 /** biome-ignore-all lint/style/useNamingConvention: mocking node ENV */
 /** biome-ignore-all lint/style/noProcessEnv: mocking node ENV */
+/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
+/** biome-ignore-all lint/complexity/noExcessiveLinesPerFunction: describe*/
 
+import process from "node:process";
 import { afterEach } from "node:test";
 import { assert, beforeEach, describe, it, vi } from "vitest";
 import { z } from "zod";
