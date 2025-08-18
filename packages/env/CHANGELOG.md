@@ -1,5 +1,11 @@
 # @repo/env
 
+## 1.0.14
+
+### Patch Changes
+
+- [`2825357`](https://github.com/mkvlrn/tools/commit/28253573e9ffbb5699364c4cfa8e396fe15e9c51) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump dependencies
+
 ## 1.0.13
 
 ### Patch Changes
