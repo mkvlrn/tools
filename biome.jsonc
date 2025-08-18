@@ -4,6 +4,15 @@
   "extends": ["./packages/config/src/biome-node.jsonc"],
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*", "!build", "!node_modules", "!dist", "!coverage"]
+    "includes": [
+      "**/*",
+      "!./build",
+      "!./node_modules",
+      "!./.changeset",
+      "!./.github",
+      "!./.husky",
+      "!./.turbo",
+      "!./.vscode"
+    ]
   }
 }
