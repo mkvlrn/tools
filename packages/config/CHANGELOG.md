@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.14
+
+### Patch Changes
+
+- [`87deb99`](https://github.com/mkvlrn/tools/commit/87deb99823e6eb8cbf42fdb4d56f041cc13d1bd3) Thanks [@mkvlrn](https://github.com/mkvlrn)! - clear files config
+
 ## 2.0.13
 
 ### Patch Changes
