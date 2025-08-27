@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { setTimeout } from "node:timers/promises";
 import { assert, describe, it } from "vitest";
-import { type AsyncResult, R, type Result } from "./index.js";
+import { type AsyncResult, R, type Result } from "#/index";
 
 class CustomError extends Error {
   readonly customField: number;
