@@ -1,27 +1,24 @@
-import { existsSync, globSync } from "node:fs";
+import { globSync } from "node:fs";
 import nodeExternals from "rollup-plugin-node-externals";
+import type { PluginOption } from "vite";
 import dts from "vite-plugin-dts";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { defineConfig } from "vitest/config";
 
 // application entry point
-const entry = globSync("./src/**/*.ts").filter((f) => !f.endsWith("test.ts"));
+const excludeFromBuildRegex = /\.(test|spec)\.ts$/;
+const entry = globSync("./src/**/*.ts").filter((f) => !excludeFromBuildRegex.test(f));
 const entryRoot = "src";
-
-// emits declarations only if there is no src/main.ts file
-const dtsPlugin = existsSync("./src/main.ts")
-  ? null
-  : dts({ include: entry, logLevel: "error", entryRoot });
 
 export default defineConfig({
   plugins: [
-    // externalize node built-ins only
-    nodeExternals(),
+    // externalize node built-ins
+    nodeExternals() as PluginOption,
     // resolve tsconfig path aliases
     tsconfigPaths(),
-    // declarations (if lib)
-    dtsPlugin,
-  ].filter(Boolean),
+    // declarations
+    dts({ include: entry, logLevel: "error", entryRoot }),
+  ],
 
   build: {
     target: "esnext",
