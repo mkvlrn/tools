@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.15
+
+### Patch Changes
+
+- [`7fc73ca`](https://github.com/mkvlrn/tools/commit/7fc73ca8aafc8e3cb407565f0570d6d196ea40b6) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump schema for configs
+
 ## 2.0.14
 
 ### Patch Changes
