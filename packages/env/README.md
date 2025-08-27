@@ -5,7 +5,7 @@ Environment variable parser powered by zod.
 ## Installation
 
 ```bash
-npm add @mkvlrn/env zod
+yarn add @mkvlrn/env zod
 ```
 
 ## Usage
