@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.14
+
+### Patch Changes
+
+- [`3280604`](https://github.com/mkvlrn/tools/commit/3280604384c353f6187fae5d583457a131f1f2bc) Thanks [@mkvlrn](https://github.com/mkvlrn)! - error type is optional, defaults to javascript's Error
+
 ## 4.0.13
 
 ### Patch Changes
