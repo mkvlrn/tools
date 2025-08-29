@@ -6,14 +6,14 @@
  * It is also an alias object containing the ok and error functions to
  * make it easier to create Result objects.
  */
-export type Result<T, E extends Error> =
+export type Result<T, E extends Error = Error> =
   | { readonly error: undefined; readonly value: T }
   | { readonly error: E };
 
 /**
  * Async version of Result type that wraps a Result in a Promise.
  */
-export type AsyncResult<T, E extends Error> = Promise<Result<T, E>>;
+export type AsyncResult<T, E extends Error = Error> = Promise<Result<T, E>>;
 
 /**
  * Result utility functions for creating Result objects.

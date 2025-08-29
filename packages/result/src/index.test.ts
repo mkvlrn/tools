@@ -13,7 +13,7 @@ class CustomError extends Error {
   }
 }
 
-function division(a: number, b: number): Result<number, Error> {
+function division(a: number, b: number): Result<number> {
   if (b === 0) {
     return R.error(new Error("cannot divide by zero"));
   }
