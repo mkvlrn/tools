@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.15
+
+### Patch Changes
+
+- [`41d356e`](https://github.com/mkvlrn/tools/commit/41d356e57d6f47c6db6f1bb5ad12990ea0e16bf1) Thanks [@mkvlrn](https://github.com/mkvlrn)! - error type for result mandatory again
+
 ## 4.0.14
 
 ### Patch Changes
