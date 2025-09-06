@@ -6,13 +6,10 @@
     "ignoreUnknown": true,
     "includes": [
       "**/*",
-      "!./build",
-      "!./node_modules",
-      "!./.changeset",
-      "!./.github",
-      "!./.husky",
-      "!./.turbo",
-      "!./.vscode"
+      "!**/node_modules/**/*",
+      "!**/build/**/*",
+      "!**/coverage/**/*",
+      "!**/*.d.ts"
     ]
   }
 }

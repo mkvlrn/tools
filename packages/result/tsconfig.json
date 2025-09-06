@@ -1,11 +1,3 @@
 {
-  "extends": ["../config/src/tsconfig-node.json"],
-  "compilerOptions": {
-    // no transpiling
-    "noEmit": true,
-
-    // paths
-    "baseUrl": ".",
-    "paths": { "#/*": ["./src/*"] }
-  }
+  "extends": ["../config/src/tsconfig-node.json"]
 }

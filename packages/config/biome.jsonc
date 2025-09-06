@@ -1,9 +1,15 @@
 {
   "$schema": "../../node_modules/@biomejs/biome/configuration_schema.json",
-  "root": false,
-  "extends": "//",
+  "root": true,
+  "extends": ["./src/biome-node.jsonc"],
   "files": {
     "ignoreUnknown": true,
-    "includes": ["**/*", "!build", "!node_modules", "!dist", "!coverage"]
+    "includes": [
+      "**/*",
+      "!**/node_modules/**/*",
+      "!**/build/**/*",
+      "!**/coverage/**/*",
+      "!**/*.d.ts"
+    ]
   }
 }
