@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.16
+
+### Patch Changes
+
+- [`4099c73`](https://github.com/mkvlrn/tools/commit/4099c73cb66c1e02d2b164be5576d71368a01060) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add typescript QOL and noEmit on by default
+
 ## 2.0.15
 
 ### Patch Changes
