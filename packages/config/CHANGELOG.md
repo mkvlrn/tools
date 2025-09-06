@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.17
+
+### Patch Changes
+
+- [`86a12a9`](https://github.com/mkvlrn/tools/commit/86a12a92609a8535f5f0e2465d27e8db088dcc36) Thanks [@mkvlrn](https://github.com/mkvlrn)! - module resolution for node/nest
+
 ## 2.0.16
 
 ### Patch Changes
