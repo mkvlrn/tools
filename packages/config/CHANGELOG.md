@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.18
+
+### Patch Changes
+
+- [`110062f`](https://github.com/mkvlrn/tools/commit/110062f0f5bf325a6f8f985773862f89a14af2e1) Thanks [@mkvlrn](https://github.com/mkvlrn)! - react and next tsconfig use nodenext
+
 ## 2.0.17
 
 ### Patch Changes
