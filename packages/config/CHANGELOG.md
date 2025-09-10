@@ -1,5 +1,13 @@
 # @mkvlrn/config
 
+## 2.0.19
+
+### Patch Changes
+
+- [`8714eac`](https://github.com/mkvlrn/tools/commit/8714eaccb28855fbb5bd4b01c53f89d08fdff569) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump dependencies
+
+- [`8714eac`](https://github.com/mkvlrn/tools/commit/8714eaccb28855fbb5bd4b01c53f89d08fdff569) Thanks [@mkvlrn](https://github.com/mkvlrn)! - tsconfigs dont have noEmit by default any longer
+
 ## 2.0.18
 
 ### Patch Changes
