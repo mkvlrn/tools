@@ -35,6 +35,6 @@
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
-    "lint-staged": "^16.1.5"
+    "lint-staged": "^16.1.6"
   }
 }

@@ -1,8 +1,5 @@
 {
   "compilerOptions": {
-    // no emit by default
-    "noEmit": true,
-
     // some typescript QOL
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,

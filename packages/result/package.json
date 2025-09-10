@@ -34,9 +34,9 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@types/node": "^24.3.0",
+    "@types/node": "^24.3.1",
     "@vitest/coverage-v8": "^3.2.4",
-    "lint-staged": "^16.1.5",
+    "lint-staged": "^16.1.6",
     "rimraf": "^6.0.1",
     "tsc-alias": "^1.8.16",
     "tsc-files": "^1.1.4",
