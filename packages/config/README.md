@@ -7,7 +7,7 @@ To be used in my node projects - aimed at modern, type-safe, non-spaghetti codeb
 ## Installation
 
 ```bash
-yarn add @mkvlrn/config -D
+pnpm add @mkvlrn/config -D
 ```
 
 ## Usage

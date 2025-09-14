@@ -5,7 +5,7 @@ Type-safe Result pattern for TypeScript representing success or error. Anything 
 ## Installation
 
 ```bash
-yarn add @mkvlrn/result
+pnpm add @mkvlrn/result
 ```
 
 ## Usage
