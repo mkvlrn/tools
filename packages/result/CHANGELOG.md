@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.17
+
+### Patch Changes
+
+- [`0f77459`](https://github.com/mkvlrn/tools/commit/0f774596be19218a504d68fc5c343623598e180b) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump deps
+
 ## 4.0.16
 
 ### Patch Changes

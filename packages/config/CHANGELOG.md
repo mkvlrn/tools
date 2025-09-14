@@ -1,5 +1,13 @@
 # @mkvlrn/config
 
+## 2.0.20
+
+### Patch Changes
+
+- [`0f77459`](https://github.com/mkvlrn/tools/commit/0f774596be19218a504d68fc5c343623598e180b) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump deps
+
+- [`0f77459`](https://github.com/mkvlrn/tools/commit/0f774596be19218a504d68fc5c343623598e180b) Thanks [@mkvlrn](https://github.com/mkvlrn)! - pnpm compatibility
+
 ## 2.0.19
 
 ### Patch Changes
