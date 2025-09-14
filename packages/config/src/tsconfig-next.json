@@ -25,7 +25,7 @@
     "target": "esnext",
 
     // pnpm compatibility
-    "preserveSymlinks": true,
+    "preserveSymlinks": false,
 
     // self explanatory
     "resolveJsonModule": true,
