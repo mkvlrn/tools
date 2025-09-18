@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.21
+
+### Patch Changes
+
+- [`c4db31b`](https://github.com/mkvlrn/tools/commit/c4db31b170b976006d6e978f911121565c52c9ca) Thanks [@mkvlrn](https://github.com/mkvlrn)! - disable biome's noUncheckedIndexedAccess thing
+
 ## 2.0.20
 
 ### Patch Changes
