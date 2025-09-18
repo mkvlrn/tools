@@ -40,6 +40,18 @@
   },
   "overrides": [
     {
+      // because of typescript's noPropertyAccessFromIndexSignature
+      "includes": ["**/*"],
+      "linter": {
+        "rules": {
+          "complexity": {
+            "useLiteralKeys": "off"
+          }
+        }
+      }
+    },
+
+    {
       // test files, config files, and some scripts
       // export defaults from them, and also import from node
       "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts"],
