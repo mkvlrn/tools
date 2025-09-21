@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.23
+
+### Patch Changes
+
+- [`459d8e7`](https://github.com/mkvlrn/tools/commit/459d8e7c7242b557edcb422d5c6d7eb8ef3c8cc0) Thanks [@mkvlrn](https://github.com/mkvlrn)! - fix output jsonc
+
 ## 2.0.22
 
 ### Patch Changes
