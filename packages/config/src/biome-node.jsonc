@@ -53,13 +53,23 @@
 
     {
       // test files, config files, and some scripts
-      // export defaults from them, and also import from node
+      // should be able to import from node
       "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts"],
       "linter": {
         "rules": {
           "correctness": {
             "noNodejsModules": "off"
-          },
+          }
+        }
+      }
+    },
+
+    {
+      // config files
+      // should be able to export defaults as per tooling requirements
+      "includes": ["**/*.config.ts"],
+      "linter": {
+        "rules": {
           "style": {
             "noDefaultExport": "off"
           }

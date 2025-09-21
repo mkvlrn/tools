@@ -52,9 +52,10 @@
     },
 
     {
-      // test files, config files, and some scripts
-      // export defaults from them, and also import from node
-      "includes": ["**/*.config.ts", "**/*.config.mjs", "**/*.test.ts", "**/*.d.ts"],
+      // config files
+      // should be able to export defaults as per tooling requirements
+      // also should be able to import from node
+      "includes": ["**/*.config.ts", "**/*.config.mjs"],
       "linter": {
         "rules": {
           "correctness": {
