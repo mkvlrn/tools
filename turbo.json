@@ -7,15 +7,6 @@
       "cache": true,
       "dependsOn": ["^build"]
     },
-    "test": {
-      "cache": false
-    },
-    "biome-check": {
-      "cache": false
-    },
-    "biome-fix": {
-      "cache": false
-    },
     "typecheck": {
       "cache": false
     }

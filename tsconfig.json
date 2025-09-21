@@ -1,0 +1,6 @@
+{
+  "extends": ["./packages/config/src/tsconfig-node.jsonc"],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
