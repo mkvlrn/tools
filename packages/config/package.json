@@ -19,17 +19,20 @@
     "node": "24.x"
   },
   "files": [
-    "src"
+    "build"
   ],
   "exports": {
-    "./biome-node": "./src/biome-node.jsonc",
-    "./biome-nest": "./src/biome-nest.jsonc",
-    "./biome-react": "./src/biome-react.jsonc",
-    "./biome-next": "./src/biome-next.jsonc",
-    "./tsconfig-node": "./src/tsconfig-node.jsonc",
-    "./tsconfig-nest": "./src/tsconfig-nest.jsonc",
-    "./tsconfig-react": "./src/tsconfig-react.jsonc",
-    "./tsconfig-next": "./src/tsconfig-next.jsonc"
+    "./biome-node": "./build/biome-node.jsonc",
+    "./biome-nest": "./build/biome-nest.jsonc",
+    "./biome-react": "./build/biome-react.jsonc",
+    "./biome-next": "./build/biome-next.jsonc",
+    "./tsconfig-node": "./build/tsconfig-node.json",
+    "./tsconfig-nest": "./build/tsconfig-nest.json",
+    "./tsconfig-react": "./build/tsconfig-react.json",
+    "./tsconfig-next": "./build/tsconfig-next.json"
+  },
+  "scripts": {
+    "build": "./build.sh"
   },
   "devDependencies": {
     "lint-staged": "^16.1.6"
