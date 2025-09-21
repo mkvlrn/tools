@@ -1,5 +1,11 @@
 # @repo/result
 
+## 4.0.18
+
+### Patch Changes
+
+- [`1657113`](https://github.com/mkvlrn/tools/commit/165711343bf0baf71f62302fb8a103be30f65d87) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add isError and isOk to result type
+
 ## 4.0.17
 
 ### Patch Changes
