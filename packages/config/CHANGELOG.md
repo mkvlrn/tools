@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.22
+
+### Patch Changes
+
+- [`c0eb6ba`](https://github.com/mkvlrn/tools/commit/c0eb6bab435d3e9f75f5309e1d69c38bcaa42e70) Thanks [@mkvlrn](https://github.com/mkvlrn)! - test/config overrides
+
 ## 2.0.21
 
 ### Patch Changes
