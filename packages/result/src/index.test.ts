@@ -1,6 +1,5 @@
-/** biome-ignore-all lint/style/noMagicNumbers: fine for tests */
 import { setTimeout } from "node:timers/promises";
-import { assert, describe, it } from "vitest";
+import { assert, describe, expect, test } from "vitest";
 import { type AsyncResult, R, type Result } from "./index.ts";
 
 class CustomError extends Error {
@@ -27,41 +26,37 @@ async function longRunning(shouldFail: boolean): AsyncResult<number, CustomError
   return shouldFail ? R.error(new CustomError(42, "wrong")) : R.ok(3);
 }
 
-describe("creates a valid result", () => {
-  describe("default Error type", () => {
-    it("ok result", () => {
-      const result = division(4, 2);
+describe("default Error type", () => {
+  test("ok result", () => {
+    const result = division(4, 2);
 
-      assert.isUndefined(result.error);
-      assert.isDefined(result.value);
-      assert.strictEqual(result.value, 2);
-    });
-
-    it("error result", () => {
-      const result = division(4, 0);
-
-      assert.isDefined(result.error);
-      assert.instanceOf(result.error, Error);
-      assert.strictEqual(result.error.message, "cannot divide by zero");
-    });
+    assert.isFalse(result.isError);
+    expect(result.value).toBe(2);
   });
 
-  describe("custom error", () => {
-    it("ok result", async () => {
-      const result = await longRunning(false);
+  test("error result", () => {
+    const result = division(4, 0);
 
-      assert.isUndefined(result.error);
-      assert.isDefined(result.value);
-      assert.strictEqual(result.value, 3);
-    });
+    assert.isTrue(result.isError);
+    expect(result.error).toBeInstanceOf(Error);
+    expect(result.error.message).toBe("cannot divide by zero");
+  });
+});
 
-    it("error result", async () => {
-      const result = await longRunning(true);
+describe("custom error", () => {
+  test("ok result", async () => {
+    const result = await longRunning(false);
 
-      assert.isDefined(result.error);
-      assert.instanceOf(result.error, CustomError);
-      assert.strictEqual(result.error.message, "wrong");
-      assert.strictEqual(result.error.customField, 42);
-    });
+    assert.isFalse(result.isError);
+    expect(result.value).toBe(3);
+  });
+
+  test("error result", async () => {
+    const result = await longRunning(true);
+
+    assert.isTrue(result.isError);
+    expect(result.error).toBeInstanceOf(CustomError);
+    expect(result.error.message).toBe("wrong");
+    expect(result.error.customField).toBe(42);
   });
 });

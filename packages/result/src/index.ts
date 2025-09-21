@@ -7,8 +7,8 @@
  * make it easier to create Result objects.
  */
 export type Result<T, E extends Error> =
-  | { readonly error: undefined; readonly value: T }
-  | { readonly error: E };
+  | { readonly isError: false; readonly isOk: true; readonly value: T }
+  | { readonly isError: true; readonly isOk: false; readonly error: E };
 
 /**
  * Async version of Result type that wraps a Result in a Promise.
@@ -25,6 +25,7 @@ export const R: {
    * @returns A Result object representing success
    */
   ok<T>(value: T): Result<T, never>;
+
   /**
    * Creates an error Result with the given error.
    * @param error The error value
@@ -32,6 +33,6 @@ export const R: {
    */
   error<E extends Error>(error: E): Result<never, E>;
 } = {
-  ok: <T>(value: T): Result<T, never> => ({ error: undefined, value }),
-  error: <E extends Error>(error: E): Result<never, E> => ({ error }),
+  ok: <T>(value: T): Result<T, never> => ({ isError: false, isOk: true, value }),
+  error: <E extends Error>(error: E): Result<never, E> => ({ isError: true, isOk: false, error }),
 };

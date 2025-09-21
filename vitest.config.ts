@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     projects: ["packages/*"],
     coverage: {
-      exclude: ["**/*.{test,spec}.ts"],
+      exclude: ["**/*.{test,spec}.ts", "**/build", "**/*.config.ts"],
     },
   },
 });
