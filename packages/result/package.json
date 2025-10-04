@@ -29,12 +29,12 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
-    "lint-staged": "^16.1.6",
+    "@types/node": "^24.6.2",
+    "lint-staged": "^16.2.3",
     "rimraf": "^6.0.1",
     "tsc-files": "^1.1.4",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "vitest": "^3.2.4"
