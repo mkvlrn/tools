@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 2.0.24
+
+### Patch Changes
+
+- [`c143cca`](https://github.com/mkvlrn/tools/commit/c143cca5ab7ac1e0676eab5810d392be41296d58) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome
+
 ## 2.0.23
 
 ### Patch Changes
