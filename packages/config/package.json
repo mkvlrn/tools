@@ -35,6 +35,6 @@
     "build": "./build.sh"
   },
   "devDependencies": {
-    "lint-staged": "^16.2.3"
+    "lint-staged": "^16.2.4"
   }
 }

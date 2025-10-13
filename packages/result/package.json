@@ -29,8 +29,8 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^24.6.2",
-    "lint-staged": "^16.2.3",
+    "@types/node": "^24.7.2",
+    "lint-staged": "^16.2.4",
     "rimraf": "^6.0.1",
     "tsc-files": "^1.1.4",
     "tsx": "^4.20.6",
