@@ -1,5 +1,13 @@
 # @mkvlrn/config
 
+## 2.0.25
+
+### Patch Changes
+
+- [`ce42f22`](https://github.com/mkvlrn/tools/commit/ce42f223942a9a4a08ba098bede9813d40af0e89) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome schema version
+
+- [`ce42f22`](https://github.com/mkvlrn/tools/commit/ce42f223942a9a4a08ba098bede9813d40af0e89) Thanks [@mkvlrn](https://github.com/mkvlrn)! - set node to lts
+
 ## 2.0.24
 
 ### Patch Changes
