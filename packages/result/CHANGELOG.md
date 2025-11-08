@@ -1,5 +1,11 @@
 # @repo/result
 
+## 5.0.0
+
+### Major Changes
+
+- [`c9c7aa5`](https://github.com/mkvlrn/tools/commit/c9c7aa530e5fe4a71ac8aebeb6b16e44dff69fe1) Thanks [@mkvlrn](https://github.com/mkvlrn)! - ok and err functions are no longer in an object
+
 ## 4.0.19
 
 ### Patch Changes
