@@ -1,6 +1,42 @@
 {
-  "extends": ["./packages/config/src/tsconfig-node.jsonc"],
   "compilerOptions": {
-    "noEmit": true
-  }
+    // no emit by default
+    "noEmit": true,
+
+    // very strict
+    "allowJs": false,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "exactOptionalPropertyTypes": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedSideEffectImports": true,
+
+    // esm
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "target": "esnext",
+
+    // pnpm compatibility
+    "preserveSymlinks": false,
+
+    // self explanatory
+    "resolveJsonModule": true,
+
+    // don't try to check for errors on imported libs
+    "skipLibCheck": true,
+
+    // standardized paths
+    "baseUrl": ".",
+    "paths": { "#/*": ["./src/*"] }
+  },
+
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
 }
