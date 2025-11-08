@@ -16,23 +16,19 @@ export type Result<T, E extends Error> =
 export type AsyncResult<T, E extends Error> = Promise<Result<T, E>>;
 
 /**
- * Result utility functions for creating Result objects.
+ * Creates a successful Result with the given value.
+ * @param value The success value
+ * @returns A Result object representing success
  */
-export const R: {
-  /**
-   * Creates a successful Result with the given value.
-   * @param value The success value
-   * @returns A Result object representing success
-   */
-  ok<T>(value: T): Result<T, never>;
+export function ok<T>(value: T): Result<T, never> {
+  return { isError: false, isOk: true, value };
+}
 
-  /**
-   * Creates an error Result with the given error.
-   * @param error The error value
-   * @returns A Result object representing error
-   */
-  error<E extends Error>(error: E): Result<never, E>;
-} = {
-  ok: <T>(value: T): Result<T, never> => ({ isError: false, isOk: true, value }),
-  error: <E extends Error>(error: E): Result<never, E> => ({ isError: true, isOk: false, error }),
-};
+/**
+ * Creates an error Result with the given error.
+ * @param error The error value
+ * @returns A Result object representing error
+ */
+export function err<E extends Error>(error: E): Result<never, E> {
+  return { isError: true, isOk: false, error };
+}

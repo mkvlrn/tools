@@ -1,6 +1,6 @@
 import { setTimeout } from "node:timers/promises";
 import { assert, describe, expect, test } from "vitest";
-import { type AsyncResult, R, type Result } from "./index.ts";
+import { type AsyncResult, err, ok, type Result } from "#/index";
 
 class CustomError extends Error {
   readonly customField: number;
@@ -14,16 +14,16 @@ class CustomError extends Error {
 
 function division(a: number, b: number): Result<number, Error> {
   if (b === 0) {
-    return R.error(new Error("cannot divide by zero"));
+    return err(new Error("cannot divide by zero"));
   }
 
-  return R.ok(a / b);
+  return ok(a / b);
 }
 
 async function longRunning(shouldFail: boolean): AsyncResult<number, CustomError> {
   await setTimeout(1);
 
-  return shouldFail ? R.error(new CustomError(42, "wrong")) : R.ok(3);
+  return shouldFail ? err(new CustomError(42, "wrong")) : ok(3);
 }
 
 describe("default Error type", () => {
