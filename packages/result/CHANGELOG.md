@@ -1,5 +1,11 @@
 # @repo/result
 
+## 5.0.2
+
+### Patch Changes
+
+- [`a912ce0`](https://github.com/mkvlrn/tools/commit/a912ce0a5b777ba71613ca70ba10c9410bd69f50) Thanks [@mkvlrn](https://github.com/mkvlrn)! - update readme
+
 ## 5.0.1
 
 ### Patch Changes
