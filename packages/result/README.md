@@ -2,6 +2,8 @@
 
 Type-safe Result pattern for TypeScript representing success or error. Anything to avoid try/catch hell.
 
+[![npm](https://img.shields.io/npm/v/@mkvlrn/result)](https://www.npmjs.com/package/@mkvlrn/result)
+
 ## Installation
 
 ```bash
@@ -28,6 +30,15 @@ if (result.isError) {
 }
 ```
 
+## API
+
+| Export              | Description                                  |
+| ------------------- | -------------------------------------------- |
+| `Result<T, E>`      | Union type representing success or failure   |
+| `AsyncResult<T, E>` | `Promise<Result<T, E>>` for async operations |
+| `ok(value)`         | Creates a success result                     |
+| `err(error)`        | Creates an error result                      |
+
 ## Examples
 
 ### Basic Function
@@ -41,7 +52,7 @@ function divide(a: number, b: number): Result<number, Error> {
 }
 
 const result = divide(10, 2);
-if (!result.isError) {
+if (result.isOk) {
   console.log(result.value); // 5
 }
 ```
