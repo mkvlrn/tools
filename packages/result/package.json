@@ -29,16 +29,16 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^24.10.0",
-    "lint-staged": "^16.2.6",
-    "rimraf": "^6.1.0",
+    "@types/node": "^25.0.3",
+    "lint-staged": "^16.2.7",
+    "rimraf": "^6.1.2",
     "tsc-files": "^1.1.4",
-    "tsdown": "^0.16.1",
-    "tsx": "^4.20.6",
+    "tsdown": "^0.18.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^6.0.3"
   },
   "dependencies": {
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.16"
   }
 }
