@@ -2,14 +2,21 @@
   "compilerOptions": {
     // very strict
     "allowJs": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "erasableSyntaxOnly": true,
-    "verbatimModuleSyntax": true,
     "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "strict": true,
     "strictNullChecks": true,
-    "noUncheckedSideEffectImports": true,
+    "verbatimModuleSyntax": true,
     // esm
     "esModuleInterop": true,
     "isolatedModules": true,
