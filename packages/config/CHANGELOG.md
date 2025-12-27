@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.5
+
+### Patch Changes
+
+- [`b27babe`](https://github.com/mkvlrn/tools/commit/b27babed0fefc8ed6f64656f1d14a5b9ddb469c1) Thanks [@mkvlrn](https://github.com/mkvlrn)! - enable tailwind directives in biome config
+
 ## 3.0.4
 
 ### Patch Changes
