@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    // no emit by default, using bundler
-    "noEmit": true,
-    // typescript QOL
-    "allowImportingTsExtensions": true,
     // very strict
     "allowJs": false,
     "erasableSyntaxOnly": true,
@@ -18,8 +14,8 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext", "Dom", "DOM.Iterable"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "moduleDetection": "force",
     "target": "esnext",
     // pnpm compatibility

@@ -20,23 +20,25 @@
   "files": [
     "build"
   ],
+  "imports": {
+    "#*": {
+      "dev": "./src/*.ts",
+      "default": "./build/*.js"
+    }
+  },
   "exports": {
     "types": "./build/index.d.ts",
     "default": "./build/index.js"
   },
   "scripts": {
-    "build": "tsdown",
-    "typecheck": "tsc"
+    "build": "rm -rf build && tsc --project tsconfig.build.json",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/node": "^25.0.3",
     "lint-staged": "^16.2.7",
-    "rimraf": "^6.1.2",
     "tsc-files": "^1.1.4",
-    "tsdown": "^0.18.3",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "vite-tsconfig-paths": "^6.0.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "vitest": "^4.0.16"
