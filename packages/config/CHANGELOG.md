@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.1
+
+### Patch Changes
+
+- [`a392c96`](https://github.com/mkvlrn/tools/commit/a392c96f8c6c22a6821f466b86d7b1d95bb4d2cd) Thanks [@mkvlrn](https://github.com/mkvlrn)! - all libs
+
 ## 3.0.0
 
 ### Major Changes
