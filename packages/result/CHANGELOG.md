@@ -1,5 +1,11 @@
 # @repo/result
 
+## 5.0.4
+
+### Patch Changes
+
+- re-publish with correct build files
+
 ## 5.0.3
 
 ### Patch Changes
