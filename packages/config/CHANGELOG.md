@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.2
+
+### Patch Changes
+
+- [`280f10a`](https://github.com/mkvlrn/tools/commit/280f10a28f7c169f3ac5e259226c58da29d0867f) Thanks [@mkvlrn](https://github.com/mkvlrn)! - nodenext module resolution
+
 ## 3.0.1
 
 ### Patch Changes
