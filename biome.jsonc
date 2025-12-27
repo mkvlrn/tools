@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/@biomejs/biome/configuration_schema.json",
   "root": true,
+  "extends": ["./packages/config/src/biome.jsonc"],
   "files": {
     "ignoreUnknown": true,
     "includes": [
@@ -11,75 +12,5 @@
       "!**/*.d.ts",
       "!**/.turbo/**/*"
     ]
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on",
-        "useSortedAttributes": "on",
-        "useSortedKeys": "off",
-        "useSortedProperties": "on"
-      }
-    }
-  },
-  "formatter": {
-    "enabled": true,
-    "formatWithErrors": true,
-    "lineEnding": "lf",
-    "lineWidth": 100,
-    "indentStyle": "space",
-    "indentWidth": 2
-  },
-  "linter": {
-    "domains": {
-      "project": "all",
-      "test": "all",
-      "react": "none",
-      "next": "none",
-      "solid": "none",
-      "qwik": "none"
-    },
-    "enabled": true,
-    "rules": {
-      "a11y": "on",
-      "complexity": "on",
-      "correctness": "on",
-      "nursery": "off",
-      "performance": "on",
-      "security": "on",
-      "style": "on",
-      "suspicious": "on"
-    }
-  },
-  "overrides": [
-    {
-      "includes": ["**/*"],
-      "linter": {
-        "rules": {
-          "complexity": {
-            // because of typescript's noPropertyAccessFromIndexSignature
-            "useLiteralKeys": "off"
-          },
-          "correctness": {
-            // importing from node is fine, this is backend only
-            "noNodejsModules": "off",
-            // bundler mode for imports
-            "useImportExtensions": "off"
-          }
-        }
-      }
-    },
-
-    {
-      // config files should be able to export defaults as per tooling requirements
-      "includes": ["**/*.config.ts"],
-      "linter": {
-        "rules": {
-          "style": {
-            "noDefaultExport": "off"
-          }
-        }
-      }
-    }
-  ]
+  }
 }

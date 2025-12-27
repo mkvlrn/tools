@@ -1,0 +1,31 @@
+{
+  "name": "@mkvlrn/config",
+  "description": "Opinionated configurations for biome and typescript",
+  "version": "2.0.25",
+  "license": "MIT",
+  "type": "module",
+  "author": "Mike Valeriano <mkvlrn@proton.me>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mkvlrn/tools"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "biome",
+    "tsconfig"
+  ],
+  "engines": {
+    "node": "22.x"
+  },
+  "files": [
+    "src"
+  ],
+  "exports": {
+    "./biome": "./src/biome.jsonc",
+    "./tsconfig": "./src/tsconfig.json"
+  },
+  "devDependencies": {
+    "lint-staged": "^16.2.7"
+  }
+}
