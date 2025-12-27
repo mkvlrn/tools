@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.4
+
+### Patch Changes
+
+- [`98c4f4d`](https://github.com/mkvlrn/tools/commit/98c4f4d7ef8592e427adedc9f463fe083fcaf003) Thanks [@mkvlrn](https://github.com/mkvlrn)! - remove comments by default on transpilation
+
 ## 3.0.3
 
 ### Patch Changes
