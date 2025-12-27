@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.3
+
+### Patch Changes
+
+- [`92f5075`](https://github.com/mkvlrn/tools/commit/92f5075b302c2e7dacf1c5163bf07789b6a6806b) Thanks [@mkvlrn](https://github.com/mkvlrn)! - stricter
+
 ## 3.0.2
 
 ### Patch Changes
