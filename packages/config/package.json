@@ -16,7 +16,7 @@
     "tsconfig"
   ],
   "engines": {
-    "node": "22.x"
+    "node": "24"
   },
   "files": [
     "src"

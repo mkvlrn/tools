@@ -1,8 +1,6 @@
 {
   "extends": ["../config/src/tsconfig.json"],
   "compilerOptions": {
-    "customConditions": ["dev"]
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+    "paths": { "#/*": ["./src/*.ts"] }
+  }
 }
