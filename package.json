@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "type": "module",
-  "author": "Mike Valeriano <mkvlrn@proton.me>",
+  "author": "Mike Valeriano <mkvlrn@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git@github.com:mkvlrn/tools"
@@ -31,8 +31,8 @@
     "@biomejs/biome": "^2.3.10",
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.8",
-    "@commitlint/cli": "^20.2.0",
-    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/cli": "^20.3.0",
+    "@commitlint/config-conventional": "^20.3.0",
     "@vitest/coverage-v8": "^4.0.16",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
