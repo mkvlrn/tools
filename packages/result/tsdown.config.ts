@@ -5,4 +5,5 @@ export default defineConfig({
   fixedExtension: false,
   outDir: "./build",
   sourcemap: true,
+  unbundle: true,
 });
