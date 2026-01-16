@@ -1,6 +1,6 @@
 import { setTimeout } from "node:timers/promises";
 import { assert, describe, expect, test } from "vitest";
-import { type AsyncResult, err, ok, type Result } from "#/index";
+import { type AsyncResult, err, ok, type Result } from "#index";
 
 class CustomError extends Error {
   readonly customField: number;

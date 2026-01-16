@@ -17,12 +17,12 @@
   "engines": {
     "node": "24"
   },
-  "imports": {
-    "#*": "./src/*.ts"
-  },
   "files": [
     "build"
   ],
+  "imports": {
+    "#*": "./src/*.ts"
+  },
   "exports": {
     "types": "./build/index.d.ts",
     "default": "./build/index.js"
