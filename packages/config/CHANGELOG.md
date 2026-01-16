@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.6
+
+### Patch Changes
+
+- [`e79a481`](https://github.com/mkvlrn/tools/commit/e79a481f422e75fafc95a68f6d05c0e740224c59) Thanks [@mkvlrn](https://github.com/mkvlrn)! - disable style.useExportsLast in biome config
+
 ## 3.0.5
 
 ### Patch Changes
