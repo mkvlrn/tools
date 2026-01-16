@@ -19,13 +19,13 @@
     "node": "24"
   },
   "scripts": {
-    "build": "turbo build",
+    "build": "pnpm -r --parallel build",
     "test": "vitest run",
     "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
     "biome-fix": "pnpm biome-check --write",
-    "typecheck": "turbo typecheck",
+    "typecheck": "pnpm -r --parallel typecheck",
     "prepare": "husky",
-    "changeset-publish": "turbo build && changeset publish"
+    "changeset-publish": "pnpm build && changeset publish"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.11",
@@ -37,7 +37,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "turbo": "^2.7.4",
     "typescript": "^5.9.3",
     "vitest": "^4.0.17"
   }
