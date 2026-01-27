@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.7
+
+### Patch Changes
+
+- [`84406b7`](https://github.com/mkvlrn/tools/commit/84406b7ea740420a0016337254e2d9d822a5719f) Thanks [@mkvlrn](https://github.com/mkvlrn)! - update biome schema
+
 ## 3.0.6
 
 ### Patch Changes
