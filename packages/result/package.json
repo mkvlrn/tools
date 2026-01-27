@@ -32,13 +32,13 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^25.0.8",
+    "@types/node": "^25.0.10",
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
-    "tsdown": "0.20.0-beta.3",
+    "tsdown": "0.20.1",
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   }
 }
