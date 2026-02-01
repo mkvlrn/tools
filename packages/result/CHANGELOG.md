@@ -1,5 +1,11 @@
 # @repo/result
 
+## 5.0.5
+
+### Patch Changes
+
+- [`33b00fa`](https://github.com/mkvlrn/tools/commit/33b00fab4caac944bebd58a5570ca2252974fb75) Thanks [@mkvlrn](https://github.com/mkvlrn)! - remove unintended dependency
+
 ## 5.0.4
 
 ### Patch Changes
