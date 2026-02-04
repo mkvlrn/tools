@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.8
+
+### Patch Changes
+
+- [`2c2bba7`](https://github.com/mkvlrn/tools/commit/2c2bba7db19c65a4462149393eced0ece74121b8) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump deps, republish with OIDC
+
 ## 3.0.7
 
 ### Patch Changes
