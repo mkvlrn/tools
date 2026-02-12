@@ -15,9 +15,6 @@
     "biome",
     "tsconfig"
   ],
-  "engines": {
-    "node": "24"
-  },
   "files": [
     "src"
   ],
