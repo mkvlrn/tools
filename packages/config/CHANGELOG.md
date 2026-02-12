@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.10
+
+### Patch Changes
+
+- [`a54d9aa`](https://github.com/mkvlrn/tools/commit/a54d9aa9228ead2a5a8277bf2e541497eb96079a) Thanks [@mkvlrn](https://github.com/mkvlrn)! - remove engine dependency from package
+
 ## 3.0.9
 
 ### Patch Changes
