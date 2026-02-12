@@ -4,13 +4,6 @@
   "extends": ["./packages/config/src/biome.jsonc"],
   "files": {
     "ignoreUnknown": true,
-    "includes": [
-      "**/*",
-      "!**/node_modules/**/*",
-      "!**/build/**/*",
-      "!**/coverage/**/*",
-      "!**/*.d.ts",
-      "!**/.turbo/**/*"
-    ]
+    "includes": ["**/*", "!**/node_modules/**/*", "!**/build/**/*", "!**/coverage/**/*"]
   }
 }

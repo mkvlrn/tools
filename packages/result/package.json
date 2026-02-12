@@ -21,7 +21,7 @@
     "build"
   ],
   "imports": {
-    "#*": "./src/*.ts"
+    "#/*": "./src/*.ts"
   },
   "exports": {
     "types": "./build/index.d.ts",
@@ -36,7 +36,7 @@
     "lint-staged": "^16.2.7",
     "tsc-files": "^1.1.4",
     "tsdown": "0.20.3",
-    "typescript": "^5.9.3",
+    "typescript": "6.0.0-beta",
     "vitest": "^4.0.18"
   }
 }
