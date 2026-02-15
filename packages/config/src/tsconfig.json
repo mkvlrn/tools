@@ -37,6 +37,8 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     // react
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    // default is empty now, so any type packages are allowed
+    "types": ["*"]
   }
 }
