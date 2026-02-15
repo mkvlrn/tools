@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.0.11
+
+### Patch Changes
+
+- [`0e8053e`](https://github.com/mkvlrn/tools/commit/0e8053e08a3a99be9fa742595aee927bc67d359d) Thanks [@mkvlrn](https://github.com/mkvlrn)! - include all available type packages for ts6
+
 ## 3.0.10
 
 ### Patch Changes
