@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.0
+
+### Minor Changes
+
+- [`60422b8`](https://github.com/mkvlrn/tools/commit/60422b8d7bfcfb20bccf47a8b8f71f4b818a2605) Thanks [@mkvlrn](https://github.com/mkvlrn)! - use only recommended domain rules, bump biome
+
 ## 3.0.11
 
 ### Patch Changes
