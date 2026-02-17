@@ -1,7 +1,8 @@
 {
-  "$schema": "https://raw.githubusercontent.com/biomejs/biome/refs/heads/main/packages/%40biomejs/biome/configuration_schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
   "root": false,
   "assist": {
+    "enabled": true,
     "actions": {
       "source": {
         "organizeImports": "on",
@@ -31,15 +32,19 @@
     "indentWidth": 2
   },
   "linter": {
-    "domains": {
-      "project": "all",
-      "test": "all",
-      "react": "all",
-      "next": "none",
-      "solid": "none",
-      "qwik": "none"
-    },
     "enabled": true,
+    "domains": {
+      "next": "none",
+      "playwright": "none",
+      "project": "recommended",
+      "qwik": "none",
+      "react": "recommended",
+      "solid": "none",
+      "test": "recommended",
+      "turborepo": "none",
+      "types": "recommended",
+      "vue": "none"
+    },
     "rules": {
       "a11y": "on",
       "complexity": "on",
@@ -62,7 +67,11 @@
           },
           "correctness": {
             // path alias already uses ts extensions
-            "useImportExtensions": "off"
+            "useImportExtensions": "off",
+            // TODO: check on new versions
+            // biome 2.4 seems to have broken this for node imports, using the ts check for now
+            // still present in 2.4.2
+            "noUnresolvedImports": "off"
           },
           "style": {
             // this is a silly rule
