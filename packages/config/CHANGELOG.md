@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.2
+
+### Patch Changes
+
+- [`da7407a`](https://github.com/mkvlrn/tools/commit/da7407aa8477c8253d5790f45da2d88a081864ea) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biomejs
+
 ## 3.1.1
 
 ### Patch Changes
