@@ -29,8 +29,8 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "^25.3.0",
-    "lint-staged": "^16.2.7",
+    "@types/node": "^25.3.3",
+    "lint-staged": "^16.3.1",
     "tsc-files": "^1.1.4",
     "tsdown": "0.20.3",
     "typescript": "6.0.0-beta",

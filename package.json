@@ -28,14 +28,14 @@
     "changeset-publish": "pnpm build && changeset publish"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.4",
+    "@biomejs/biome": "^2.4.5",
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
     "@vitest/coverage-v8": "^4.0.18",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
+    "lint-staged": "^16.3.1",
     "tsc-files": "^1.1.4",
     "typescript": "6.0.0-beta",
     "vitest": "^4.0.18"
