@@ -1,5 +1,11 @@
 # @repo/result
 
+## 5.0.8
+
+### Patch Changes
+
+- [`c2bab04`](https://github.com/mkvlrn/tools/commit/c2bab04d326a058310085ef331c5cb2e28fab656) Thanks [@mkvlrn](https://github.com/mkvlrn)! - update readme
+
 ## 5.0.7
 
 ### Patch Changes
