@@ -23,6 +23,6 @@
     "./tsconfig": "./src/tsconfig.json"
   },
   "devDependencies": {
-    "lint-staged": "^16.3.1"
+    "lint-staged": "^16.3.2"
   }
 }
