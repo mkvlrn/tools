@@ -1,8 +1,20 @@
 # @mkvlrn/result
 
-Type-safe Result pattern for TypeScript representing success or error. Anything to avoid try/catch hell.
+Dead simple Result pattern for TypeScript.
+
+No `.map()`, no `.flatMap()`, no `.andThen()`, no `.orElse()`, no `.unwrap()`, no monadic gymnastics. Just a type, two functions, and TypeScript doing what TypeScript already does well.
 
 [![npm](https://img.shields.io/npm/v/@mkvlrn/result)](https://www.npmjs.com/package/@mkvlrn/result)
+
+## Why this one?
+
+There are dozens of Result libraries for TypeScript. Nearly all of them bolt on method chaining, transformation pipelines, and functional programming utilities that turn a simple concept into an entire paradigm.
+
+This package does **one thing**: gives you a type-safe `Result<T, E>` discriminated union with `ok()` and `err()` constructors. You use `if/else` to handle it. TypeScript narrows the type for you. That's the whole API.
+
+**The entire implementation is ~35 lines. Zero runtime dependencies. Four exports.**
+
+If you need `.map().flatMap().andThen().orElse().unwrapOr()` chains, use [neverthrow](https://github.com/supermacro/neverthrow) or [ts-results](https://github.com/vultix/ts-results). They're good libraries. This isn't that.
 
 ## Installation
 
@@ -10,38 +22,24 @@ Type-safe Result pattern for TypeScript representing success or error. Anything 
 pnpm add @mkvlrn/result
 ```
 
-## Usage
-
-```typescript
-import { Result, AsyncResult, ok, err } from "@mkvlrn/result";
-
-// Success
-const success = ok(42);
-
-// Error
-const failure = err(new Error("Something went wrong"));
-
-// Check result
-const result = ok(42);
-if (result.isError) {
-  console.log("Error:", result.error.message);
-} else {
-  console.log("Value:", result.value);
-}
-```
-
 ## API
 
-| Export              | Description                                  |
+| Export              | What it does                                 |
 | ------------------- | -------------------------------------------- |
 | `Result<T, E>`      | Union type representing success or failure   |
 | `AsyncResult<T, E>` | `Promise<Result<T, E>>` for async operations |
 | `ok(value)`         | Creates a success result                     |
 | `err(error)`        | Creates an error result                      |
 
-## Examples
+That's it. That's the whole thing.
 
-### Basic Function
+## Usage
+
+```typescript
+import { type Result, type AsyncResult, ok, err } from "@mkvlrn/result";
+```
+
+### Create results, check results
 
 ```typescript
 function divide(a: number, b: number): Result<number, Error> {
@@ -53,9 +51,15 @@ function divide(a: number, b: number): Result<number, Error> {
 
 const result = divide(10, 2);
 if (result.isOk) {
-  console.log(result.value); // 5
+  console.log(result.value); // number - TypeScript knows
+}
+
+if (result.isError) {
+  console.log(result.error.message); // Error - TypeScript knows
 }
 ```
+
+No `.unwrap()`. No `.expect()`. Just an `if` statement and the compiler handles the rest.
 
 ### Async Operations
 
@@ -74,29 +78,32 @@ async function fetchUser(id: number): AsyncResult<User, Error> {
 }
 ```
 
+`AsyncResult<T, E>` is just `Promise<Result<T, E>>`. It's a type alias, not a class, not a wrapper, not a monad.
+
 ### Custom Error Types
 
 ```typescript
 class ValidationError extends Error {
-  readonly customField: number;
+  readonly code: number;
 
-  constructor(customField: number, message: string) {
+  constructor(code: number, message: string) {
     super(message);
     this.name = "ValidationError";
-    this.customField = customField;
+    this.code = code;
   }
 }
 
 function validateEmail(email: string): Result<string, ValidationError> {
   if (!email.includes("@")) {
-    return err(new ValidationError(400, "custom"));
+    return err(new ValidationError(400, "bad-email"));
   }
   return ok(email);
 }
 
 const result = validateEmail("invalid-email");
 if (result.isError) {
-  console.log(`${result.error.customField}: ${result.error.message}`);
+  // TypeScript knows this is a ValidationError, not just Error
+  console.log(`${result.error.code}: ${result.error.message}`); // 400: bad-email
 }
 ```
 
