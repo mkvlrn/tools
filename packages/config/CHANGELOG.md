@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.3
+
+### Patch Changes
+
+- [`0dd669f`](https://github.com/mkvlrn/tools/commit/0dd669fc254f4051ee800963e12987c4e2be2d1e) Thanks [@mkvlrn](https://github.com/mkvlrn)! - adjust for bundler module detection
+
 ## 3.1.2
 
 ### Patch Changes
