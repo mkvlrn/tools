@@ -20,9 +20,9 @@
     // esm
     "esModuleInterop": true,
     "isolatedModules": true,
-    "lib": ["ESNext", "Dom", "DOM.Iterable"],
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "lib": ["ESNext"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "moduleDetection": "force",
     "target": "esnext",
     // no comments by default
@@ -39,6 +39,6 @@
     // react
     "jsx": "react-jsx",
     // default is empty now, so any type packages are allowed
-    "types": ["*"]
+    "types": ["node"]
   }
 }
