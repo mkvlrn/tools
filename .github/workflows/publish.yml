@@ -38,3 +38,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
           NPM_CONFIG_PROVENANCE: true
+          NPM_CONFIG_REGISTRY: "https://registry.npmjs.org/"
