@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.5/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.6/schema.json",
   "root": false,
   "assist": {
     "enabled": true,
@@ -67,11 +67,7 @@
           },
           "correctness": {
             // path alias already uses ts extensions
-            "useImportExtensions": "off",
-            // TODO: check on new versions
-            // biome 2.4 seems to have broken this for node imports, using the ts check for now
-            // still present in 2.4.2
-            "noUnresolvedImports": "off"
+            "useImportExtensions": "off"
           },
           "style": {
             // this is a silly rule
