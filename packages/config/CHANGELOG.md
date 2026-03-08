@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.4
+
+### Patch Changes
+
+- [`49c82fc`](https://github.com/mkvlrn/tools/commit/49c82fc2dc6f98b83c3c52b2f73abc22ae926c56) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome schema and restore noUnresolvedImports rule
+
 ## 3.1.3
 
 ### Patch Changes
