@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.5
+
+### Patch Changes
+
+- [`c46c396`](https://github.com/mkvlrn/tools/commit/c46c396b1dec07b2d780362359cff1f2bb6aae22) Thanks [@mkvlrn](https://github.com/mkvlrn)! - disable noUnresolvedImports in biome again
+
 ## 3.1.4
 
 ### Patch Changes
