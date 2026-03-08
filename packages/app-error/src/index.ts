@@ -57,6 +57,26 @@ export class AppError<TCode extends string> extends Error {
 }
 
 /**
+ * Extracts a fully qualified `AppError` type from the return value of `defineErrors`.
+ *
+ * @example
+ * ```typescript
+ * const errors = defineErrors({ USER_NOT_FOUND: "NOT_FOUND" });
+ * type MyAppError = InferAppError<typeof errors>;
+ * // → AppError<"USER_NOT_FOUND">
+ * ```
+ */
+export type InferAppError<T> = T extends {
+  create: (
+    code: infer TCode extends string,
+    message: string,
+    cause?: unknown,
+  ) => AppError<infer TCode>;
+}
+  ? AppError<TCode>
+  : never;
+
+/**
  * Creates a pair of error factory functions (`throw` and `create`) from a
  * mapping of application error codes to HTTP status names.
  *

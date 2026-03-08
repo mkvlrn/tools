@@ -16,6 +16,7 @@ pnpm add @mkvlrn/app-error
 | ----------------------- | ------------------------------------------------------------------------------ |
 | `AppError<TCode>`       | Error subclass with `code`, `statusCode`, `status`, and a `serialize()` method |
 | `defineErrors(mapping)` | Takes a code → status mapping, returns `throw` and `create` helpers            |
+| `InferAppError<T>`      | Extracts a qualified `AppError` type from a `defineErrors` result              |
 
 ## Usage
 
@@ -64,6 +65,19 @@ try {
 if (err instanceof AppError) {
   res.status(err.statusCode).json(err.serialize());
   // { code: "INVALID_INPUT", message: "email is required", details: undefined }
+}
+```
+
+### Infer the qualified type
+
+Instead of writing `AppError<"USER_NOT_FOUND" | "INVALID_INPUT" | ...>` by hand, use `InferAppError` to extract it from your definition:
+
+```ts
+type MyAppError = InferAppError<typeof errors>;
+// → AppError<"USER_NOT_FOUND" | "INVALID_INPUT" | "UNAUTHORIZED_ACCESS">
+
+function handleError(err: MyAppError) {
+  // err.code is narrowed to the union — no generic to qualify manually
 }
 ```
 

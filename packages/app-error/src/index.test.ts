@@ -1,5 +1,5 @@
-import { assert, describe, expect, test } from "vitest";
-import { AppError, defineErrors } from "#/index";
+import { assert, describe, expect, expectTypeOf, test } from "vitest";
+import { AppError, defineErrors, type InferAppError } from "#/index";
 
 const errors = defineErrors({
   USER_NOT_FOUND: "NOT_FOUND",
@@ -114,5 +114,30 @@ describe("defineErrors - throw", () => {
     } catch (error) {
       expect((error as AppError<string>).cause).toBe(cause);
     }
+  });
+});
+
+describe("InferAppError", () => {
+  test("inferred type matches the code union from the mapping", () => {
+    // arrange
+    type Inferred = InferAppError<typeof errors>;
+    // assert
+    expectTypeOf<Inferred>().toEqualTypeOf<
+      AppError<"USER_NOT_FOUND" | "INVALID_INPUT" | "UNAUTHORIZED_ACCESS">
+    >();
+  });
+
+  test("inferred type is assignable from create result", () => {
+    // arrange
+    type Inferred = InferAppError<typeof errors>;
+    const error = errors.create("USER_NOT_FOUND", "gone");
+    // assert
+    expectTypeOf(error).toExtend<Inferred>();
+  });
+
+  test("resolves to never for non-defineErrors shapes", () => {
+    // assert
+    expectTypeOf<InferAppError<string>>().toEqualTypeOf<never>();
+    expectTypeOf<InferAppError<{ unrelated: true }>>().toEqualTypeOf<never>();
   });
 });
