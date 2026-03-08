@@ -9,6 +9,10 @@
     "type": "git",
     "url": "git@github.com:mkvlrn/tools"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [
     "node",
     "typescript",
