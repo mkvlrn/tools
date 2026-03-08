@@ -67,7 +67,11 @@
           },
           "correctness": {
             // path alias already uses ts extensions
-            "useImportExtensions": "off"
+            "useImportExtensions": "off",
+            // TODO: check on new versions
+            // biome 2.4 seems to have broken this for some imports (i.e., http-status-codes)
+            // still present in 2.4.6
+            "noUnresolvedImports": "off"
           },
           "style": {
             // this is a silly rule
