@@ -1,5 +1,11 @@
 # @mkvlrn/app-error
 
+## 0.0.5
+
+### Patch Changes
+
+- [`9c435ad`](https://github.com/mkvlrn/tools/commit/9c435add78ae1f72e154d1c7a799089590190e05) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add typeguard for errors
+
 ## 0.0.4
 
 ### Patch Changes
