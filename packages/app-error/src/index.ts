@@ -101,6 +101,9 @@ export type InferAppError<T> = T extends {
  *
  * // creates an AppError without throwing
  * const err = errors.create("INVALID_INPUT", "Email is required");
+ *
+ * // type guard — narrows to AppError<"USER_NOT_FOUND" | "INVALID_INPUT">
+ * if (errors.is(someError)) { ... }
  * ```
  */
 export function defineErrors<TCode extends string>(mapping: Record<TCode, StatusName>) {
@@ -132,5 +135,13 @@ export function defineErrors<TCode extends string>(mapping: Record<TCode, Status
      */
     create: (code: TCode, message: string, cause?: unknown): AppError<TCode> =>
       new AppError(code, resolved[code], message, cause),
+
+    /**
+     * Type guard that narrows an unknown value to `AppError<TCode>`.
+     *
+     * @param err Any value to check.
+     * @returns   `true` if `err` is an `AppError` instance.
+     */
+    is: (err: unknown): err is AppError<TCode> => err instanceof AppError,
   };
 }

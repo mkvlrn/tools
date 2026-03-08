@@ -15,7 +15,7 @@ pnpm add @mkvlrn/app-error
 | Export                  | What it does                                                                   |
 | ----------------------- | ------------------------------------------------------------------------------ |
 | `AppError<TCode>`       | Error subclass with `code`, `statusCode`, `status`, and a `serialize()` method |
-| `defineErrors(mapping)` | Takes a code → status mapping, returns `throw` and `create` helpers            |
+| `defineErrors(mapping)` | Takes a code → status mapping, returns `throw`, `create`, and `is` helpers     |
 | `InferAppError<T>`      | Extracts a qualified `AppError` type from a `defineErrors` result              |
 
 ## Usage
@@ -65,6 +65,17 @@ try {
 if (err instanceof AppError) {
   res.status(err.statusCode).json(err.serialize());
   // { code: "INVALID_INPUT", message: "email is required", details: undefined }
+}
+```
+
+### Type guard
+
+`errors.is()` narrows an unknown value to your qualified `AppError` type — useful in catch blocks and error filters:
+
+```ts
+if (errors.is(err)) {
+  // err is AppError<"USER_NOT_FOUND" | "INVALID_INPUT" | "UNAUTHORIZED_ACCESS">
+  res.status(err.statusCode).json(err.serialize());
 }
 ```
 

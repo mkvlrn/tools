@@ -117,6 +117,47 @@ describe("defineErrors - throw", () => {
   });
 });
 
+describe("defineErrors - is", () => {
+  test("returns true for an AppError created from the same mapping", () => {
+    // arrange
+    const error = errors.create("USER_NOT_FOUND", "gone");
+    // assert
+    expect(errors.is(error)).toBe(true);
+  });
+
+  test("returns true for a manually constructed AppError", () => {
+    // arrange
+    const error = new AppError("RANDOM", 500, "boom");
+    // assert
+    expect(errors.is(error)).toBe(true);
+  });
+
+  test("returns false for a plain Error", () => {
+    // assert
+    expect(errors.is(new Error("nope"))).toBe(false);
+  });
+
+  test("returns false for non-error values", () => {
+    // assert
+    expect(errors.is(null)).toBe(false);
+    expect(errors.is(undefined)).toBe(false);
+    expect(errors.is("string")).toBe(false);
+    expect(errors.is(42)).toBe(false);
+    expect(errors.is({})).toBe(false);
+  });
+
+  test("narrows the type to AppError<TCode>", () => {
+    // arrange
+    const err: unknown = errors.create("INVALID_INPUT", "bad");
+    // act & assert
+    if (errors.is(err)) {
+      expectTypeOf(err).toEqualTypeOf<
+        AppError<"USER_NOT_FOUND" | "INVALID_INPUT" | "UNAUTHORIZED_ACCESS">
+      >();
+    }
+  });
+});
+
 describe("InferAppError", () => {
   test("inferred type matches the code union from the mapping", () => {
     // arrange
