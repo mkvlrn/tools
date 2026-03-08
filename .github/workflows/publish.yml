@@ -36,6 +36,5 @@ jobs:
           publish: pnpm changeset-publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ""
           HUSKY: 0
           NPM_CONFIG_PROVENANCE: true
