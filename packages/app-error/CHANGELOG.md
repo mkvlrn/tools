@@ -1,5 +1,11 @@
 # @mkvlrn/app-error
 
+## 0.0.4
+
+### Patch Changes
+
+- [`e4bf248`](https://github.com/mkvlrn/tools/commit/e4bf248b837e7091f6a1b90349fbc7e357724bb3) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add type infer
+
 ## 0.0.3
 
 ### Patch Changes
