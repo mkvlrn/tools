@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.6
+
+### Patch Changes
+
+- [`7662f50`](https://github.com/mkvlrn/tools/commit/7662f50f1d56d2d5bc98238b46bc3ad2b0d11525) Thanks [@mkvlrn](https://github.com/mkvlrn)! - update biome config schema
+
 ## 3.1.5
 
 ### Patch Changes
