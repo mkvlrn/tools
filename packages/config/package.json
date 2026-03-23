@@ -27,6 +27,7 @@
     "./tsconfig": "./src/tsconfig.json"
   },
   "devDependencies": {
-    "lint-staged": "^16.4.0"
+    "lint-staged": "^16.4.0",
+    "typescript": "^6.0.2"
   }
 }
