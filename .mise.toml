@@ -15,7 +15,7 @@ description = "puts everything in its place"
 run = ["mise trust --yes", "mise install", "pnpm install", "lefthook install"]
 [tasks.publish]
 description = "builds and publishes with changeset"
-run = ["mise //...:build", "npx changeset publish"]
+run = ["mise //...:build", "npx changeset publish --access public"]
 [tasks.lint]
 description = "attempts to fix what is safe to do"
 run = "mise lint-check --write"
