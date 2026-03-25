@@ -1,0 +1,39 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["node", "pnpm"],
+      "groupName": "engine-sync"
+    },
+    {
+      "matchPackageNames": ["github:**"],
+      "groupName": "Toolchain (mise)"
+    },
+    {
+      "matchManagers": ["mise"],
+      "groupName": "Toolchain (mise)",
+      "excludePackageNames": ["node", "pnpm"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "groupName": "Dependencies (pnpm)",
+      "excludePackageNames": ["node", "pnpm"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["(^|/|\\.)mise\\.toml$"],
+      "matchStrings": ["\"github:(?<packageName>[^\"]+)\"\\s*=\\s*\"(?<currentValue>[^\"]+)\""],
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "rangeStrategy": "bump",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0
+}

@@ -28,13 +28,8 @@
     "types": "./build/index.d.ts",
     "default": "./build/index.js"
   },
-  "scripts": {
-    "build": "tsdown",
-    "typecheck": "tsc-files"
-  },
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "lint-staged": "^16.4.0",
     "tsc-files": "^1.1.4",
     "tsdown": "0.21.4",
     "typescript": "^6.0.2",

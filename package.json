@@ -16,28 +16,15 @@
     "tools"
   ],
   "engines": {
-    "node": "24",
-    "pnpm": "10"
+    "node": "24.14.1",
+    "pnpm": "10.33.0"
   },
-  "scripts": {
-    "build": "pnpm -r --parallel build",
-    "test": "vitest run",
-    "biome-check": "biome check --diagnostic-level=warn --no-errors-on-unmatched",
-    "biome-fix": "pnpm biome-check --write",
-    "typecheck": "pnpm -r --parallel typecheck",
-    "prepare": "husky",
-    "changeset-publish": "pnpm build && changeset publish"
-  },
+
   "devDependencies": {
-    "@biomejs/biome": "^2.4.8",
     "@changesets/changelog-github": "^0.6.0",
     "@changesets/cli": "^2.30.0",
     "@changesets/config": "^3.1.3",
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
     "@vitest/coverage-v8": "^4.1.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
     "tsc-files": "^1.1.4",
     "typescript": "^6.0.2",
     "vitest": "^4.1.0"
