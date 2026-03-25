@@ -49,4 +49,3 @@ jobs:
           HUSKY: 0
           NPM_CONFIG_PROVENANCE: true
           NPM_CONFIG_REGISTRY: "https://registry.npmjs.org/"
-          MISE_EXPERIMENTAL: true

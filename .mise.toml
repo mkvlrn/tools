@@ -41,3 +41,4 @@ run = "pnpm vitest --bail=1 --reporter=github-actions"
 [settings]
 disable_backends = ["asdf"]
 use_versions_host = false
+experimental = true
