@@ -12,16 +12,25 @@ jobs:
   run-checks:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: actions/checkout@v6
+      - uses: jdx/mise-action@v4
+      - name: get mise cache directory
+        shell: bash
+        run: echo "MISE_CACHE_PATH=$(mise config show.cache.dir 2>/dev/null || echo ~/.local/cache/mise)" >> $GITHUB_ENV
+      - uses: actions/cache@v5
         with:
-          version: 10
-      - uses: actions/setup-node@v4
+          path: ${{ env.MISE_CACHE_PATH }}
+          key: ${{ runner.os }}-mise-cache-${{ hashFiles('.mise/**') }}
+          restore-keys: ${{ runner.os }}-mise-cache-
+      - name: get pnpm store directory
+        shell: bash
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      - uses: actions/cache@v5
         with:
-          node-version-file: ".nvmrc"
-          cache: "pnpm"
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: ${{ runner.os }}-pnpm-store-
       - run: pnpm install --frozen-lockfile
-      - run: |
-          pnpm typecheck
-          pnpm biome-check
-          pnpm test
+      - run: mise typecheck
+      - run: mise lint-check
+      - run: mise test-ci
