@@ -30,7 +30,6 @@
     "default": "./build/index.js"
   },
   "devDependencies": {
-    "@mkvlrn/config": "^3.1.4",
     "@types/node": "^25.5.0",
     "tsc-files": "^1.1.4",
     "tsdown": "0.21.4",
