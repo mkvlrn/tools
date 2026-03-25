@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.8
+
+### Patch Changes
+
+- [`cd19946`](https://github.com/mkvlrn/tools/commit/cd199468fe0abe86611180b491cadf03e96b6a73) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome schema
+
 ## 3.1.7
 
 ### Patch Changes
