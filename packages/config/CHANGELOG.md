@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.11
+
+### Patch Changes
+
+- [`7950143`](https://github.com/mkvlrn/tools/commit/795014345d4efd869b43ad9d7d56b3d840eba90e) Thanks [@mkvlrn](https://github.com/mkvlrn)! - actually allow default exports from .config/\*
+
 ## 3.1.10
 
 ### Patch Changes
