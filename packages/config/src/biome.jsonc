@@ -83,7 +83,7 @@
     {
       // test files, config files, and some scripts
       // should be able to import from node
-      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts"],
+      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/./.config/*.ts"],
       "linter": {
         "rules": {
           "correctness": {
