@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.10
+
+### Patch Changes
+
+- [`230d58b`](https://github.com/mkvlrn/tools/commit/230d58b185a3284101a53e31910133a6f8d051d0) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add .config to allowed default exports with biome
+
 ## 3.1.9
 
 ### Patch Changes
