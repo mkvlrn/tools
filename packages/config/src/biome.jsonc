@@ -83,7 +83,7 @@
     {
       // test files, config files, and some scripts
       // should be able to import from node
-      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/./.config/*.ts"],
+      "includes": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts", "**/.config/*.ts"],
       "linter": {
         "rules": {
           "correctness": {
@@ -94,7 +94,7 @@
     },
     {
       // config files should be able to export defaults as per tooling requirements
-      "includes": ["**/*.config.ts"],
+      "includes": ["**/*.config.ts", "**/.config/*.ts"],
       "linter": {
         "rules": {
           "style": {
