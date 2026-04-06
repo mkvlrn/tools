@@ -25,6 +25,9 @@
   "imports": {
     "#/*": "./src/*.ts"
   },
+  "scripts": {
+    "build": "tsdown"
+  },
   "exports": {
     "types": "./build/index.d.ts",
     "default": "./build/index.js"
