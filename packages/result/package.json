@@ -29,7 +29,7 @@
     "default": "./build/index.js"
   },
   "devDependencies": {
-    "@types/node": "^25.5.1",
+    "@types/node": "^25.5.2",
     "tsc-files": "^1.1.4",
     "tsdown": "0.21.7",
     "typescript": "^6.0.2",

@@ -1,15 +1,15 @@
 [commit-msg.commands]
-cog-lint = { run = "cog verify --file {1}" }
+commitlint = { run = "pnpm commitlint -x @commitlint/config-conventional --edit $1" }
 
 [pre-commit.commands]
-typecheck = { glob = "*.{ts,tsx}", run = "mise typecheck-staged {staged_files}" }
-lint = { glob = "*.{ts,tsx,json,jsonc}", run = "mise lint-check {staged_files}" }
-test = { glob = "*.{ts,tsx}", run = "mise test-staged {staged_files}" }
+typecheck = { glob = "*.{ts,tsx}", run = "pnpm typecheck-staged {staged_files}" }
+lint = { glob = "*.{ts,tsx,json,jsonc}", run = "pnpm lint-check {staged_files}" }
+test = { glob = "*.{ts,tsx}", run = "pnpm test-staged {staged_files}" }
 
 [pre-push.commands]
-typecheck = { run = "mise typecheck" }
-lint = { run = "mise lint-check" }
-test = { run = "mise test-ci" }
+typecheck = { run = "pnpm typecheck" }
+lint = { run = "pnpm lint-check" }
+test = { run = "pnpm test-ci" }
 
 [post-checkout.commands]
 sync-mise = { run = "mise install" }
