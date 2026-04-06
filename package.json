@@ -29,7 +29,7 @@
     "test-staged": "vitest related --bail=1 --reporter=github-actions",
     "test-ci": "vitest --bail=1 --reporter=github-actions",
     "prepare": "lefthook install",
-    "changeset-publish": "pnpm build && changeset publish"
+    "changeset-publish": "pnpm build && changeset publish --access=public"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.10",
