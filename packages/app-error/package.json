@@ -33,9 +33,9 @@
     "default": "./build/index.js"
   },
   "devDependencies": {
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "tsc-files": "^1.1.4",
-    "tsdown": "0.21.7",
+    "tsdown": "0.21.8",
     "typescript": "^6.0.2",
     "vitest": "^4.1.4"
   },
