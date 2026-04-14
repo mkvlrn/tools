@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.1.12
+
+### Patch Changes
+
+- [`58ae2c9`](https://github.com/mkvlrn/tools/commit/58ae2c9717608f5898305accd4352561b980b213) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome
+
 ## 3.1.11
 
 ### Patch Changes
