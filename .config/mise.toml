@@ -4,7 +4,7 @@ experimental_monorepo_root = true
 config_roots = ["packages/*"]
 
 [tools]
-node = "24"
+node = "v24.15.0"
 pnpm = "10"
 
 [settings]
