@@ -4,8 +4,8 @@ experimental_monorepo_root = true
 config_roots = ["packages/*"]
 
 [tools]
-node = "24.14.1"
-pnpm = "10.33.0"
+node = "24"
+pnpm = "10"
 
 [settings]
 disable_backends = ["asdf"]
