@@ -33,7 +33,7 @@
       "datasourceTemplate": "github-releases"
     }
   ],
-  "rangeStrategy": "bump",
+  "rangeStrategy": "pin",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "dependencyDashboard": true
