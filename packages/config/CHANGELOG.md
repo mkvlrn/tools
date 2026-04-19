@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 3.2.0
+
+### Minor Changes
+
+- [`60f5bb3`](https://github.com/mkvlrn/tools/commit/60f5bb3865e246cfe558a3bf6cde6868d5edf183) Thanks [@mkvlrn](https://github.com/mkvlrn)! - add vue support in biome config
+
 ## 3.1.13
 
 ### Patch Changes
