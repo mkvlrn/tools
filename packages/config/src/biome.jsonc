@@ -6,14 +6,19 @@
     "actions": {
       "source": {
         "organizeImports": "on",
-        "useSortedAttributes": "on",
+        "useSortedAttributes": "off",
         "useSortedKeys": "off",
-        "useSortedProperties": "on"
+        "useSortedProperties": "off"
       }
     }
   },
+  "json": {
+    "parser": { "allowComments": true },
+    "formatter": { "enabled": true }
+  },
   "javascript": {
-    "parser": { "unsafeParameterDecoratorsEnabled": true } // for nest decorators
+    "parser": { "unsafeParameterDecoratorsEnabled": true }, // for nest decorators
+    "formatter": { "enabled": true }
   },
   "css": {
     "parser": { "tailwindDirectives": true },
