@@ -1,5 +1,11 @@
 # @mkvlrn/config
 
+## 4.0.0
+
+### Major Changes
+
+- [`e4b7458`](https://github.com/mkvlrn/tools/commit/e4b74588920311821ec19c1ca644a834640764b2) Thanks [@mkvlrn](https://github.com/mkvlrn)! - change import names for config
+
 ## 3.2.0
 
 ### Minor Changes
