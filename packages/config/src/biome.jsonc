@@ -13,15 +13,15 @@
     }
   },
   "javascript": {
-    "parser": {
-      // for nest decorators
-      "unsafeParameterDecoratorsEnabled": true
-    }
+    "parser": { "unsafeParameterDecoratorsEnabled": true } // for nest decorators
   },
   "css": {
-    "parser": {
-      "tailwindDirectives": true
-    }
+    "parser": { "tailwindDirectives": true },
+    "formatter": { "enabled": true }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true,
+    "formatter": { "enabled": true }
   },
   "formatter": {
     "enabled": true,
@@ -43,7 +43,7 @@
       "test": "recommended",
       "turborepo": "none",
       "types": "recommended",
-      "vue": "none"
+      "vue": "recommended"
     },
     "rules": {
       "a11y": "on",
