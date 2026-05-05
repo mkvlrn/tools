@@ -48,7 +48,7 @@
       "test": "recommended",
       "turborepo": "none",
       "types": "recommended",
-      "vue": "recommended"
+      "vue": "none"
     },
     "rules": {
       "a11y": "on",
