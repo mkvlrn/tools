@@ -1,5 +1,13 @@
 # @mkvlrn/config
 
+## 4.0.1
+
+### Patch Changes
+
+- [`ee07b1f`](https://github.com/mkvlrn/tools/commit/ee07b1fcc9dca865f8e6c65a50de190b44940132) Thanks [@mkvlrn](https://github.com/mkvlrn)! - bump biome version
+
+- [`67aa407`](https://github.com/mkvlrn/tools/commit/67aa40702109e5c108a3f433f1fff5b063d907fe) Thanks [@mkvlrn](https://github.com/mkvlrn)! - disable vue rules
+
 ## 4.0.0
 
 ### Major Changes
